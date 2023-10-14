@@ -1,10 +1,14 @@
+import pprint
+import google.generativeai as palm
+import os
+from dotenv import load_dotenv
+load_dotenv()
 def main():
-    import pprint
-    import google.generativeai as palm
+    
 
-    API_KEY = 'AIzaSyB15U8lI0rvgNr0mLDZO287OcuF_GJL5tU'
+    PALMSECRET_KEY = os.getenv('PALM_KEY')
 
-    palm.configure(api_key=API_KEY)
+    palm.configure(api_key=PALMSECRET_KEY)
 
     models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
     model = models[0].name
