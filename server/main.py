@@ -1,8 +1,5 @@
-def main():
-    print("wassp")
-    print('hi')
+from server import *
 
 
-
-if __name__== "__main__":
-    main()
+if __name__ == '__main__':
+   app.run()
