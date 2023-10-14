@@ -1,6 +1,4 @@
-def main():
-    print("http server branch")
+from server import *
 
-
-if __name__== "__main__":
-    main()
+if __name__ == '__main__':
+   app.run()
