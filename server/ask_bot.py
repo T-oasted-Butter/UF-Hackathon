@@ -30,6 +30,17 @@ def ask_bot(user_question):
         # The maximum length of the response, 1200 maximum
         max_output_tokens=800,
     )
+    return(cleanup_data(completion.result))
 
-    return(completion.result)
-
+# removes asterisks
+def cleanup_data(data):
+    i = 0
+    while (i < len(data)):
+        if data[i] == "*":
+            if i == len(data) - 1:
+                data = data[0:i]
+            else:
+                data = data[0:i] + data[i+1:]
+            i -= 1
+        i += 1
+    return data
