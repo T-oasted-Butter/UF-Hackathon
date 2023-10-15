@@ -5,8 +5,8 @@
   align-items: flex-end;
   padding: 20px;
   max-width: 60%;
-  max-height: 400px;
-  height: 100vh;
+  /* max-height: 400px; */
+  height: 75vh;
   width: 60%;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -33,7 +33,7 @@
   border-radius: 20px;
   padding: 10px;
   margin: 5px 0;
-  max-width: 100%;
+  max-width: 60%;
   word-wrap: break-word;
 }
 
