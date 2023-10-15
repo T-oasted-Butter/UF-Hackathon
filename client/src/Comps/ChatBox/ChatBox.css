@@ -4,8 +4,8 @@
   align-items: flex-end;
   padding: 30px;
   max-width: 80%;
-  max-height: 400px; /* Set a fixed height for the chat box */
-  overflow-y: auto; /* Add a vertical scrollbar when the content overflows */
+  max-height: 400px;
+  overflow-y: auto;
 }
   
   .message-bubble {

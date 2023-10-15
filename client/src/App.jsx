@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import ChatInput from './Comps/ChatInput/ChatInput';
 import ChatBox from './Comps/ChatBox/ChatBox';
-import './App.css';
+import ChatInput from './Comps/ChatInput/ChatInput';
 
 function App() {
-  const [messages, setMessages] = useState([{ sender: 'shabounig', text: "messaskdjnaage" }]);
+  const [messages, setMessages] = useState([]);
 
   const handleNewMessage = (message) => {
     const newMessage = { sender: 'user', text: message };
