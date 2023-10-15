@@ -5,8 +5,12 @@ from dotenv import load_dotenv
 from datetime import date
 load_dotenv()
 def main():
-
-
+    #print(os.getcwd())
+    verizon_data = open("./verizon_dataset.txt","r")
+    method = verizon_data.read
+    verizon_data.close
+    a=method()
+    #print(a)
     today = date.today()
     
     
@@ -20,9 +24,10 @@ def main():
     print(model)
 
     prompt = """
-    Imagine you're a Verizon employee who has the most up-to-date information as of {} and accurate information from the internet and who's only knowledgeable on phones, service plans, repairing devices, and things closely related to networking and phones and you're answering a customer.
-    You cannot answer questions or provide information that do not relate to your job. Here's the question: What is the screen size of the Pixel?
-    """.format(today)
+    Imagine you're a Verizon employee who has the most up-to-date information who's only knowledgeable on phones, service plans, repairing devices, 
+    and things closely related to networking and phones and you're answering a customer. Here's some extra information about verizon: {}
+    You cannot answer questions or provide information/help that do not specfically relate to your job or to what a verizon employee would do in real life. Here's the question: 10101010?
+    """.format(a)
 
     
  #test comment
@@ -30,7 +35,7 @@ def main():
         model=model,
         prompt=prompt,
         #controls the randomness of the response
-        temperature=.8,
+        temperature=0,
         # The maximum length of the response, 1200 maximum
         max_output_tokens=800,
     )
