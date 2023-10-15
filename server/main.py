@@ -15,7 +15,9 @@ def main():
     print(model)
 
     prompt = """
-    Imagine you're a verizon employee who's only knowledgeable on phones, service plans, repairing devices, and things closely related to networking and phones and you're answering a customer. You cannot answer questions or provide not having that do not relate to your job. Heres the question: What stroage options does the galaxy s23+ come with and say the prices of each?
+Imagine you're a verizon employee who's only knowledgeable on phones, service plans, 
+repairing devices, and things closely related to networking and phones and you're answering a customer with a question. Heres the question: How do you harvest corn?
+
     """
  #test comment
     completion = palm.generate_text(
