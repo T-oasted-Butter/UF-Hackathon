@@ -18,7 +18,7 @@ const ChatInput = ({ onMessageSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit} className="chat-input">
-      <input
+      <textarea
         type="text"
         placeholder="Type your message..."
         value={message}

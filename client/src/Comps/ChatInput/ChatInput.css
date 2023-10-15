@@ -4,15 +4,21 @@
   padding: 10px;
   position: sticky;
   bottom: 0;
+  width:270%;
+  max-width:800px;
 }
 
-.chat-input input {
+.chat-input textarea {
   flex: 1;
   padding: 10px;
   border: none;
   border-radius: 20px;
   margin-right: 10px;
-  height: 100%; /* Ensure the input field takes up the full height */
+  height: 100%;
+  white-space: pre-wrap; /* This allows text to wrap to the next line */
+  overflow-wrap: break-word; /* Handles long words */
+  resize: none; /* Disables the resize handle in some browsers */
+  
 }
 
 .chat-input button {
