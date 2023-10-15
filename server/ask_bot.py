@@ -18,9 +18,9 @@ def ask_bot(user_question):
     prompt = """
     Imagine you're a Verizon employee who has the most up-to-date information who's only knowledgeable on phones, service plans, repairing devices, 
     and things closely related to networking and phones and you're answering a customer.
-    You cannot answer questions or provide information/help that do not specfically relate to your job or to what a verizon employee would do in real life. 
+    Don't answer questions or provide information/help that do not specfically relate to verizon and its products. 
     Here's the question: 
-    """+ user_question
+    """ + user_question
 
     completion = palm.generate_text(
         model=model,
