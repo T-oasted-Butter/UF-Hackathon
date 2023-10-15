@@ -3,12 +3,12 @@
   display: flex;
   background-color: #f0f0f0;
   padding: 10px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
-  width: 90vw;
-  max-width: 90vw;
+  width: 60%;
+  max-width: 60%;
   border-radius: 20px;
-  padding-left: 30px;;
+  padding-left: 30px;
 }
 
 .chat-input textarea {
