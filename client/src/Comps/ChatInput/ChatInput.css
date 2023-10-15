@@ -5,9 +5,10 @@
   padding: 10px;
   position: sticky;
   bottom: 0;
-  width: 60%;
-  max-width: 60%;
+  width: 90vw;
+  max-width: 90vw;
   border-radius: 20px;
+  padding-left: 30px;;
 }
 
 .chat-input textarea {
@@ -24,7 +25,7 @@
 
 .chat-input button {
   background-color: red;
-  color: #fff;
+  color: wheat;
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
