@@ -6,7 +6,7 @@ from googletrans import Translator
 from dotenv import load_dotenv
 from datetime import date
 load_dotenv()
-def ask_bot(user_question, language):
+def ask_bot(user_question, language = 'English'):
     translator = Translator()
 
     if language == "English":
