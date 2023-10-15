@@ -4,8 +4,8 @@
   padding: 10px;
   position: sticky;
   bottom: 0;
-  width:270%;
-  max-width:800px;
+  width:60%;
+  max-width:60%;
 }
 
 .chat-input textarea {

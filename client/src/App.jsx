@@ -16,12 +16,14 @@ function App() {
       <div className="parent-container">
         <div>Verizon Logo</div>
         <div className=''>
-          MARKETTING
+          MARKETTINGhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
         </div>
-        <div className="chat-container">
-        <ChatBox messages={messages} style={{ width: '50%' }} />
-        <ChatInput onMessageSubmit={handleNewMessage} style={{ width: '50%' }} />
-        </div>
+        <center>
+          <div className="chat-container">
+            <ChatBox messages={messages} />
+            <ChatInput onMessageSubmit={handleNewMessage}/>
+          </div>
+        </center>
       </div>
       <div>hat</div>
     </div>

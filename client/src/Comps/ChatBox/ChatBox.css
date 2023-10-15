@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: flex-end;
   padding: 20px;
-  max-width: 800px;
+  max-width: 60%;
   max-height: 400px;
   height: 400px;
-  width:220%;
+  width:60%;
   overflow-y: auto;
   scrollbar-width: thin; /* This is for Firefox */
 
