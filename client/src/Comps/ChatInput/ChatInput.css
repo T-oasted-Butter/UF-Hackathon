@@ -1,0 +1,26 @@
+.chat-input {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  height: 100%; /* Ensure the input field takes up the full height */
+}
+
+.chat-input button {
+  background-color: #0084FF;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 100%; /* Ensure the button takes up the full height */
+}
