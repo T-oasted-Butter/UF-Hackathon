@@ -1,0 +1,49 @@
+/* Default styles for chat input */
+.chat-input {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  width: 60%;
+  max-width: 60%;
+  border-radius: 20px;
+}
+
+.chat-input textarea {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  height: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  resize: none;
+}
+
+.chat-input button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 100%;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .chat-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chat-input textarea {
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+
+  .chat-input button {
+    padding: 10px; /* Adjust button padding as needed for smaller screens */
+  }
+}

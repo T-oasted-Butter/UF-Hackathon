@@ -1,0 +1,60 @@
+/* Default styles for chat box */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+  max-width: 60%;
+  max-height: 400px;
+  height: 100vh;
+  width: 60%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 6px;
+  }
+
+  scrollbar-color: #888 #eee;
+}
+
+.message-bubble {
+  background-color: #e4e6eb;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  background-color: red;
+  color: #fff;
+}
+
+.message-bubble.other {
+  align-self: flex-start;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .chat-box {
+    max-width: 100%; /* Full width on smaller screens */
+    width: 100%;
+  }
+
+  .message-bubble {
+    max-width: 90%; /* Adjust max-width as needed for smaller screens */
+  }
+}
