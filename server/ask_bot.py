@@ -1,10 +1,24 @@
 import pprint
 import google.generativeai as palm
 import os
+import googletrans
+from googletrans import Translator
 from dotenv import load_dotenv
 from datetime import date
 load_dotenv()
-def ask_bot(user_question):
+def ask_bot(user_question, language = 'English'):
+    translator = Translator()
+
+    if language == "English":
+        translated_text = translator.translate(user_question, src="en", dest='en')
+        user_question = translated_text.text
+    elif language == "French":
+        translated_text = translator.translate(user_question, src="fr", dest='en')
+        user_question = translated_text.text
+    elif language == "Spanish":
+        translated_text = translator.translate(user_question, src="es", dest='en')
+        user_question = translated_text.text
+
 
     PALMSECRET_KEY = os.getenv("PALM_KEY")
 
@@ -30,6 +44,16 @@ def ask_bot(user_question):
         # The maximum length of the response, 1200 maximum
         max_output_tokens=800,
     )
+    
+    if language == "English":
+        translated_text = translator.translate(completion.result, src="en", dest='en')
+        completion.result = translated_text.text
+    elif language == "French":
+        translated_text = translator.translate(completion.result, src="en", dest='fr')
+        completion.result = translated_text.text
+    elif language == "Spanish":
+        translated_text = translator.translate(completion.result, src="en", dest='es')
+        completion.result = translated_text.text
     return(cleanup_data(completion.result))
 
 # removes asterisks
