@@ -1,37 +1,4 @@
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
-.parent-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adjust the height if needed */
-  
-}
-
-.chat-container {
-  
-  max-width: 400px;
-  width: 400px;
-  height: 400px;
-  border: 1px solid #ccc;
-  /* Add any other styles you want for the .chat-container */
-}
-
-.chat-box {
-  flex: 1;
-  max-height: none;
-  overflow: hidden;
-}
-
-.chat-input {
-  background-color: #f0f0f0;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  word-wrap: break-word;
-}

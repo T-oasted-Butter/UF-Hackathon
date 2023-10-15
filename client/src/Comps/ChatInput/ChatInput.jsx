@@ -12,6 +12,7 @@ const ChatInput = ({ onMessageSubmit }) => {
     e.preventDefault();
     if (message.trim() !== '') {
       onMessageSubmit(message);
+      // axios.post()
       setMessage('');
     }
   };
