@@ -1,17 +1,12 @@
 from flask import Flask, request, jsonify
+from ask_bot import ask_bot
 app = Flask(__name__)
  
- #sends "Hello World on server startup"
-@app.route('/', methods=['GET'])
-def hello():
-   return 'Hello World'
-
-#tests server's ability to receive files
-@app.route('/posttest', methods=['POST'])
-def posttest():
+# sends user prompt to palmapi and returns response
+@app.route("/askbot", methods=["POST"])
+def askbot():
    data = request.get_json()
-   print(data['name'])
-   response = 'received message'
+   response = ask_bot(data["data"])
    return jsonify(response), 200
    
  
