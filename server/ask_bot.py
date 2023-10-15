@@ -6,11 +6,6 @@ from datetime import date
 load_dotenv()
 def ask_bot(user_question):
 
-
-    
-
-    
-    
     PALMSECRET_KEY = os.getenv("PALM_KEY")
 
     palm.configure(api_key=PALMSECRET_KEY)
@@ -19,7 +14,7 @@ def ask_bot(user_question):
     models = [m for m in palm.list_models() if "generateText" in m.supported_generation_methods]
     model = models[0].name
     print(model)
-
+    #question prompt
     prompt = """
     Imagine you're a Verizon employee who has the most up-to-date information who's only knowledgeable on phones, service plans, repairing devices, 
     and things closely related to networking and phones and you're answering a customer.
@@ -27,8 +22,6 @@ def ask_bot(user_question):
     Here's the question: 
     """+ user_question
 
-    
- #test comment
     completion = palm.generate_text(
         model=model,
         prompt=prompt,
@@ -38,9 +31,5 @@ def ask_bot(user_question):
         max_output_tokens=800,
     )
 
-    print(completion.result)
+    return(completion.result)
 
-
-
-if __name__== "__main__":
-    ask_bot('what are the google pixel 7a specs?')
