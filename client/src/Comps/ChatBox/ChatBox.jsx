@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
 import './ChatBox.css';
-
+import React, { useContext,useRef, useEffect } from 'react';
+import LanguageContext from '../Context/LanguageContext';
 const ChatBox = ({ messages }) => {
   const chatBoxRef = useRef(null);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   useEffect(() => {
     // Scroll to the bottom of the chat box when new messages are added
