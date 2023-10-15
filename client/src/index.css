@@ -25,10 +25,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  margin-top: 12vh;
+  padding: 0;
+  min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1 {
