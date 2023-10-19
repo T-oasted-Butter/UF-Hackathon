@@ -1,0 +1,8 @@
+pip install flask
+pip install flask_cors
+pip install python-dotenv
+pip install -q google.generativeai --user
+pip install googletrans
+pip install dotenv
+pip install datetime
+pip install pprint

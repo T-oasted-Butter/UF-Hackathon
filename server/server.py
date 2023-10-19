@@ -9,7 +9,7 @@ CORS(app)
 @app.route("/askbot", methods=["POST"])
 def askbot():
    data = request.get_json()
-   response = ask_bot(data["data"])
+   response = ask_bot(data["data"], "English")
    return jsonify(response), 200
    
  

@@ -54,7 +54,8 @@ def ask_bot(user_question, language = 'English'):
     elif language == "Spanish":
         translated_text = translator.translate(completion.result, src="en", dest='es')
         completion.result = translated_text.text
-    return(cleanup_data(completion.result))
+    print(completion.result)
+    return((completion.result))
 
 # removes asterisks
 def cleanup_data(data):
