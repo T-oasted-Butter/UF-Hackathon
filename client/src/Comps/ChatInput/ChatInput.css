@@ -5,10 +5,10 @@
   padding: 10px;
   position: fixed;
   bottom: 0;
-  width: 97vw;
-  max-width: 97vw;
+  width: 50vw;
+  max-width: 50vw;
   border-radius: 20px;
-  padding-left: 30px;
+  left: 25vw;
   height:7vh;
 }
 
@@ -17,7 +17,6 @@
   padding: 10px;
   border: none;
   border-radius: 20px;
-  margin-right: 10px;
   height: 70%;
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -32,20 +31,4 @@
   padding: 10px 20px;
   cursor: pointer;
   height: 100%;
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .chat-input {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .chat-input textarea {
-    margin-right: 0; /* Remove right margin for smaller screens */
-  }
-
-  .chat-input button {
-    padding: 10px; /* Adjust button padding as needed for smaller screens */
-  }
 }
